@@ -1,5 +1,6 @@
 package com.example.workbrew
 
+import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.widget.ArrayAdapter
@@ -7,6 +8,8 @@ import android.widget.Spinner
 import android.widget.ToggleButton
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class AddPlaceActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -62,7 +65,36 @@ class AddPlaceActivity : AppCompatActivity() {
         // Apply the adapter to the spinner
         priceSpinner.adapter = adapter
 
+        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigation)
+        val floatingActionButton = findViewById<FloatingActionButton>(R.id.fabButton)
 
+        // Handle Bottom Navigation
+        bottomNavigationView.setOnItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.nav_home -> {
+                    startActivity(Intent(this, HomepageActivity::class.java))
+                    true
+                }
+                R.id.nav_cafes -> {
+                    startActivity(Intent(this, CafesActivity::class.java))
+                    true
+                }
+                R.id.nav_coworking -> {
+                    startActivity(Intent(this, CoworkingActivity::class.java))
+                    true
+                }
+                R.id.nav_profile -> {
+                    startActivity(Intent(this, ProfileActivity::class.java))
+                    true
+                }
+                else -> false
+            }
+        }
+
+        // Handle Floating Action Button Click (Navigating to Add Place)
+        floatingActionButton.setOnClickListener {
+            startActivity(Intent(this, AddPlaceActivity::class.java))
+        }
 
     }
 }

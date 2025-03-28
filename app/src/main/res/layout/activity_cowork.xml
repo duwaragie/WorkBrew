@@ -95,6 +95,7 @@
                             android:layout_width="245dp"
                             android:layout_height="240dp"
                             android:layout_marginEnd="8dp"
+                            android:id="@+id/cardWorx"
                             app:cardBackgroundColor="#FB878E"
                             app:cardCornerRadius="14dp"
                             app:cardElevation="4dp">
@@ -143,6 +144,7 @@
                             android:layout_height="240dp"
                             android:layout_marginEnd="8dp"
                             app:cardBackgroundColor="#FB878E"
+                            android:id="@+id/cardHomeTree"
                             app:cardCornerRadius="14dp"
                             app:cardElevation="4dp">
                             <!-- Card 2 content (unchanged from original) -->
@@ -208,6 +210,7 @@
                             android:layout_marginEnd="8dp"
                             app:cardBackgroundColor="#FB878E"
                             app:cardCornerRadius="14dp"
+                            android:id="@+id/cardLikuidSpaces"
                             app:cardElevation="4dp">
                             <!-- Card 3 content (unchanged from original) -->
                             <LinearLayout
@@ -255,6 +258,7 @@
                             android:layout_marginEnd="8dp"
                             app:cardBackgroundColor="#FB878E"
                             app:cardCornerRadius="14dp"
+                            android:id="@+id/cardHub9"
                             app:cardElevation="4dp">
                             <!-- Card 4 content (unchanged from original) -->
                             <LinearLayout
