@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:gravity="center_horizontal">
+
+    <!-- Logo -->
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginLeft="@dimen/lrt_margin"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="@dimen/lrt_margin"
+        android:contentDescription="@string/app_logo"
+        android:src="@drawable/logo" />
+
+    <!-- Supporting Image -->
+
+    <!-- Tagline -->
+
+    <ImageView
+        android:id="@+id/welcome_image"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginLeft="@dimen/lrt_margin"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="@dimen/lrt_margin"
+        android:layout_marginBottom="@dimen/lrt_margin"
+        android:contentDescription="@string/welcome_illustration"
+        android:scaleType="fitCenter"
+        android:src="@drawable/welcome_image" />
+
+    <TextView
+        android:id="@+id/tagline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/lrt_margin"
+        android:layout_marginTop="@dimen/lrt_margin"
+        android:layout_marginRight="@dimen/lrt_margin"
+        android:layout_marginBottom="@dimen/lrt_margin"
+        android:gravity="center"
+        android:text="@string/welcome_message"
+        android:textColor="@color/textColour"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <!-- Sign Up Button -->
+    <Button
+        android:id="@+id/signup_button"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/lrt_margin"
+        android:layout_marginTop="14dp"
+        android:layout_marginRight="@dimen/lrt_margin"
+        android:layout_marginBottom="@dimen/lrt_margin"
+        android:backgroundTint="@color/accentColor"
+        android:text="@string/sign_up"
+        android:textColor="@color/white" />
+
+    <!-- Login Button -->
+    <Button
+        android:id="@+id/login_button"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/lrt_margin"
+        android:layout_marginTop="14dp"
+        android:layout_marginRight="@dimen/lrt_margin"
+        android:layout_marginBottom="@dimen/lrt_margin"
+        android:backgroundTint="@color/accentColor"
+        android:text="@string/login"
+        android:textColor="@color/white" />
+
+</LinearLayout>

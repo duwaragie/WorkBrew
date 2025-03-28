@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">WorkBrew</string>
+    <string name="welcome_message">Your Ideal Workspace,\nJust a Tap Away</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="login">Login</string>
+    <string name="onboard_title1">Find Your Perfect Work Spot</string>
+    <string name="onboard_des1">Discover quiet cafes and serene public spots tailored for your productivity.</string>
+    <string name="onboard_title2">Know Before You Go</string>
+    <string name="onboard_des2">Make informed choices with trusted reviews and live updates.</string>
+    <string name="onboard_title3">Work Smarter, Brew Better</string>
+    <string name="onboard_des3">Focus on what matters while WorkBrew handles the rest.</string>
+    <string name="skip">Skip</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="get_started">Get Started</string>
+    <string name="img3">TODO</string>
+    <string name="img2">TODO</string>
+    <string name="img1">TODO</string>
+    <string name="welcome_illustration">Welcome Illustration</string>
+    <string name="app_logo">App Logo</string>
+    <string name="add_new_place">Add a place\n</string>
+</resources>

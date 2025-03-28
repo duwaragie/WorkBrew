@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <!-- Logo -->
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginLeft="@dimen/lrt_margin"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="@dimen/lrt_margin"
+        android:contentDescription="@string/app_logo"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/logo" />
+
+    <!-- Email Section -->
+    <TextView
+        android:id="@+id/email_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/lrt_margin"
+        android:layout_marginTop="@dimen/lrt_margin"
+        android:layout_marginRight="@dimen/lrt_margin"
+        android:text="E-mail Address"
+        android:textColor="@color/textColour"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/email_input"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="@dimen/lrt_margin"
+        android:layout_marginTop="@dimen/lrt_margin"
+        android:layout_marginRight="@dimen/lrt_margin"
+        android:background="@drawable/input_background"
+        android:hint="Enter your email"
+        android:paddingStart="16dp"
+        android:textSize="16sp" />
+
+    <!-- Password Section -->
+    <TextView
+        android:id="@+id/password_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/lrt_margin"
+        android:layout_marginTop="@dimen/lrt_margin"
+        android:layout_marginRight="@dimen/lrt_margin"
+        android:text="Password"
+        android:textColor="@color/textColour"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/password_input"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="@dimen/lrt_margin"
+        android:layout_marginTop="@dimen/lrt_margin"
+        android:layout_marginRight="@dimen/lrt_margin"
+        android:background="@drawable/input_background"
+        android:hint="Enter your password"
+        android:inputType="textPassword"
+        android:paddingStart="16dp"
+        android:textSize="16sp" />
+
+    <!-- Password Strength Indicators -->
+    <LinearLayout
+        android:id="@+id/password_strength_layout"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_marginLeft="@dimen/lrt_margin"
+        android:layout_marginTop="@dimen/lrt_margin"
+        android:layout_marginRight="@dimen/lrt_margin"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/gray" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/gray" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/gray" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/gray" />
+    </LinearLayout>
+
+    <!-- Password Strength Instruction -->
+    <TextView
+        android:id="@+id/password_instruction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/lrt_margin"
+        android:layout_marginTop="@dimen/lrt_margin"
+        android:layout_marginRight="@dimen/lrt_margin"
+        android:text="Use 8 or more characters with a mix of letters, numbers and symbols"
+        android:textColor="@color/gray"
+        android:textSize="14sp" />
+
+    <!-- Sign Up Button -->
+    <Button
+        android:id="@+id/signup_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/lrt_margin"
+        android:layout_marginTop="@dimen/lrt_margin"
+        android:layout_marginRight="@dimen/lrt_margin"
+        android:backgroundTint="@color/accentColor"
+        android:text="@string/sign_up"
+        android:textColor="@color/white" />
+
+    <!-- Already have an account? -->
+    <TextView
+        android:id="@+id/already_account_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="@dimen/lrt_margin"
+        android:layout_marginTop="75dp"
+        android:layout_marginRight="@dimen/lrt_margin"
+        android:text="Do you already have an account?"
+        android:textColor="@color/textColour"
+        android:textSize="16sp" />
+
+    <!-- Login Button -->
+    <Button
+        android:id="@+id/login_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/lrt_margin"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="@dimen/lrt_margin"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/accentColor"
+        android:text="@string/login"
+        android:textColor="@color/white" />
+
+</LinearLayout>
