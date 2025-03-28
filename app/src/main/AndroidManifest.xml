@@ -30,6 +30,7 @@
         <activity android:name=".HomepageActivity" />
         <activity android:name=".CafesActivity"/>
         <activity android:name=".AddPlaceActivity"/>
+        <activity android:name=".CoworkingActivity"/>
 
     </application>
 
