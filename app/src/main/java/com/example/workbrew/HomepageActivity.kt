@@ -23,7 +23,7 @@ class HomepageActivity : AppCompatActivity() {
         bottomNavigationView.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.nav_home -> {
-                    // Stay on homepage or reload home fragment
+                    startActivity(Intent(this, HomepageActivity::class.java))
                     true
                 }
                 R.id.nav_cafes -> {
