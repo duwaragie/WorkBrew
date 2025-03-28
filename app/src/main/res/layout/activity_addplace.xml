@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <!-- Header Section -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@color/white">
+
+            <!-- Logo on Left -->
+            <ImageView
+                android:id="@+id/headerLogo"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:layout_gravity="start|center_vertical"
+                android:layout_marginStart="@dimen/lrt_margin"
+                android:contentDescription="App Logo"
+                android:src="@drawable/logo_length" />
+
+            <!-- Hamburger Menu on Right -->
+            <ImageButton
+                android:id="@+id/hamburgerMenu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginEnd="@dimen/lrt_margin"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Menu"
+                android:src="@drawable/menu" />
+        </com.google.android.material.appbar.MaterialToolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- Main Content Scroll View -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="56dp"
+        android:visibility="visible"
+        tools:visibility="visible">
+
+        <!-- Single Linear Layout as Direct Child of ScrollView -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="30dp"
+            android:paddingTop="50dp"
+            android:paddingEnd="30dp"
+            android:paddingBottom="100dp">
+
+            <!-- Greeting Text -->
+
+            <TextView
+                android:id="@+id/coworkext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="Recommend a Place For Others"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/thankyouText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="Thank you for contributing to WorkBrew!"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fill out what you know below and we will take care of the rest! If the space already exists we will update it with the new information you provide."
+                android:textAlignment="textStart"
+                android:textColor="@color/gray"
+                android:textSize="16sp" />
+
+
+            <!-- Name space Label -->
+            <TextView
+                android:id="@+id/username_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/lrt_margin"
+                android:text="Name of the Space *"
+                android:textColor="@color/textColour"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!-- Name space Input -->
+            <EditText
+                android:id="@+id/username_input"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:hint="Name of cafe or coworking space"
+                android:background="@drawable/input_background"
+                android:paddingStart="16dp"
+                android:textSize="16sp" />
+
+            <!-- cafe or cowork Label -->
+            <TextView
+                android:id="@+id/cafecowork_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/lrt_margin"
+                android:text="Cafe or Coworking Space"
+                android:textColor="@color/textColour"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ToggleButton
+                        android:id="@+id/toggleCafe"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="4dp"
+                        android:background="@drawable/custom_toggle_background"
+                        android:textOn="Cafe"
+                        android:textOff="Cafe"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"/>
+
+                    <ToggleButton
+                        android:id="@+id/toggleCowork"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/custom_toggle_background"
+                        android:textOn="Coworking"
+                        android:textOff="Coworking"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Location Label -->
+            <TextView
+                android:id="@+id/location_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/lrt_margin"
+                android:text="Location *"
+                android:textColor="@color/textColour"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!-- Name space Input -->
+            <EditText
+                android:id="@+id/location_input"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:hint="City &amp; Country"
+                android:background="@drawable/input_background"
+                android:paddingStart="16dp"
+                android:textSize="16sp" />
+
+            <!-- Wifi Label -->
+            <TextView
+                android:id="@+id/wifi_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/lrt_margin"
+                android:text="WiFi Speed *"
+                android:textColor="@color/textColour"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!-- Wifi Input -->
+            <EditText
+                android:id="@+id/wifi_input"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:hint="eg. (26.2)"
+                android:background="@drawable/input_background"
+                android:paddingStart="16dp"
+                android:textSize="16sp" />
+
+            <!-- Price Label -->
+            <TextView
+                android:id="@+id/price_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/lrt_margin"
+                android:text="Food Price Relative to your Location *"
+                android:textColor="@color/textColour"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/spinner_background"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/yesno1_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/lrt_margin"
+                    android:text="Plug Sockets on Most Tables"
+                    android:textColor="@color/textColour"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <Switch
+                    android:id="@+id/switch1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/lrt_margin"
+                    android:layout_weight="1"
+                    tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/yesno2_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/lrt_margin"
+                    android:text="Good for Video Calls"
+                    android:textColor="@color/textColour"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <Switch
+                    android:id="@+id/switch2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/lrt_margin"
+                    android:layout_weight="1"
+                    tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/yesno3_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/lrt_margin"
+                    android:text="Aesthetic Interior"
+                    android:textColor="@color/textColour"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <Switch
+                    android:id="@+id/switch3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/lrt_margin"
+                    android:layout_weight="1"
+                    tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+            </LinearLayout>
+
+            <!-- other Label -->
+            <TextView
+                android:id="@+id/other_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/lrt_margin"
+                android:text="Anything else you'd like to share"
+                android:textColor="@color/textColour"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!-- other Input -->
+            <EditText
+                android:id="@+id/other_input"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="20dp"
+                android:gravity="top|start"
+                android:hint="This is the information we use to write the description. The more detail, the better!"
+                android:background="@drawable/input_background"
+                android:paddingStart="16dp"
+                android:paddingTop="16dp"
+                android:textSize="16sp"
+                android:inputType="textMultiLine"
+                android:scrollbars="vertical"/>
+
+
+            <Button
+                android:id="@+id/submit_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/lrt_margin"
+                android:layout_marginTop="@dimen/lrt_margin"
+                android:layout_marginRight="@dimen/lrt_margin"
+                android:backgroundTint="@color/accentColor"
+                android:text="@string/submit_a_place"
+                android:textColor="@color/white" />
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation Bar -->
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottomAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:backgroundTint="@color/bottomAppBarbg">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bottomAppBarbg"
+            app:itemIconTint="@color/nav_icon_color"
+            app:itemTextColor="@color/nav_text_color"
+            app:menu="@menu/bottom_nav_menu" />
+    </com.google.android.material.bottomappbar.BottomAppBar>
+
+    <!-- Floating Action Button -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/add"
+        android:contentDescription="Add New Place"
+        android:backgroundTint="@color/primaryColor"
+        app:tint="@color/white"
+        app:layout_anchor="@id/bottomAppBar"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
